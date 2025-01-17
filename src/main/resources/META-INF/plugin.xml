@@ -1,18 +1,25 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.iamsxm.allformat</id>
-    <name>all-format</name>
+    <name>All-Format</name>
     <vendor>iamsxm</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.iamsxm.allformat.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-    </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.iamsxm.allformat.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
+    <actions>
+        <action id="AllFormat"
+                class="com.github.iamsxm.allformat.FormatAction"
+                text="AllFormat">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="alt f"/>
+        </action>
+        <action id="run.damoguyansi.AllFormat"
+                class="com.github.iamsxm.allformat.FormatAction"
+                text="AllFormat"
+                description="AllFormat" icon="/icons/AllFormat.png">
+            <add-to-group group-id="ToolbarRunGroup" anchor="after" relative-to-action="Stop"/>
+        </action>
+    </actions>
 </idea-plugin>

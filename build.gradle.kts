@@ -31,6 +31,13 @@ repositories {
 
 // Dependencies are managed with Gradle version catalog - read more: https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog
 dependencies {
+    implementation(group= "com.fifesoft", name= "rsyntaxtextarea", version= "3.1.1")
+    implementation(group= "com.google.zxing", name= "core", version= "3.4.0")
+    implementation(group= "com.google.zxing", name= "javase", version= "3.3.1")
+    implementation(group= "org.jsoup", name= "jsoup", version= "1.15.3")
+    implementation(group= "cn.hutool", name= "hutool-http", version= "5.8.35")
+    implementation(group= "cn.hutool", name= "hutool-json", version= "5.8.35")
+    implementation(group= "cn.hutool", name= "hutool-crypto", version= "5.8.35")
     testImplementation(libs.junit)
 
     // IntelliJ Platform Gradle Plugin Dependencies Extension - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-dependencies-extension.html
@@ -53,7 +60,7 @@ dependencies {
 // Configure IntelliJ Platform Gradle Plugin - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-extension.html
 intellijPlatform {
     pluginConfiguration {
-        version = providers.gradleProperty("pluginVersion")
+            version = providers.gradleProperty("pluginVersion")
 
         // Extract the <!-- Plugin description --> section from README.md and provide for the plugin's manifest
         description = providers.fileContents(layout.projectDirectory.file("README.md")).asText.map {
