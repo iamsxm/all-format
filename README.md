@@ -4,7 +4,7 @@
 [![Version](https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
 
-[ENGLISH](https://github.com/iamsxm/all-format/README-EN.md)
+[ENGLISH](https://github.com/iamsxm/all-format/blob/main/README-EN.md)
 
 <!-- Plugin description -->
 
