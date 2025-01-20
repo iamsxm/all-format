@@ -32,7 +32,7 @@ repositories {
 // Dependencies are managed with Gradle version catalog - read more: https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog
 dependencies {
     implementation(group= "com.fifesoft", name= "rsyntaxtextarea", version= "3.1.1")
-    implementation(group= "com.google.zxing", name= "core", version= "3.4.0")
+    implementation(group= "com.google.zxing", name= "core", version= "3.5.3")
     implementation(group= "com.google.zxing", name= "javase", version= "3.3.1")
     implementation(group= "org.jsoup", name= "jsoup", version= "1.15.3")
     implementation(group= "cn.hutool", name= "hutool-http", version= "5.8.35")
