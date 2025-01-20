@@ -4,12 +4,16 @@
 [![Version](https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
 
-<!-- Plugin description -->
-**写在前头:本插件只适用 Intellij IDEA和android studio  工具**
+[ENGLISH](https://github.com/iamsxm/all-format/README-EN.md)
 
-这是一款开发者辅助工具，方便开发者格式化格种数据，方便阅读调式，如：格式化JSON、XML、HTML,生成MD5、QRCODE二维码、转换Base64、Unicode等，中英文翻译.
+<!-- Plugin description -->
+
+这是一款开发者辅助工具，方便开发者格式化格种数据，方便阅读调式，如：格式化JSON、XML、HTML,生成MD5、QRCODE二维码、转换Base64、Unicode.
 
 <!-- Plugin description end -->
+
+![示例图片](https://raw.githubusercontent.com/iamsxm/all-format/refs/heads/main/QQ20250120-092224.png)
+
 
 ## 安装方法
 
@@ -28,7 +32,10 @@
        导入下载的 all-format-x.x.x.zip
      3重启 Intellij IDEA .
 ~~~
+## 使用方法
+方法1:使用快捷键`Alt+F`
 
+方法2:标题栏右键，选择菜单`自定义工具栏`，打开设置，左上角`添加`，在`插件` `All-format`中选择`AllFormat`
 
 ---
 Plugin based on the [IntelliJ Platform Plugin Template][template].
