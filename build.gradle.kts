@@ -36,7 +36,7 @@ dependencies {
     implementation(group= "com.google.zxing", name= "javase", version= "3.5.3")
     implementation(group= "org.jsoup", name= "jsoup", version= "1.18.3")
     implementation(group= "cn.hutool", name= "hutool-http", version= "5.8.35")
-    implementation(group= "cn.hutool", name= "hutool-json", version= "5.8.35")
+    implementation(group= "cn.hutool", name= "hutool-json", version= "5.8.36")
     implementation(group= "cn.hutool", name= "hutool-crypto", version= "5.8.35")
     testImplementation(libs.junit)
 
