@@ -111,15 +111,37 @@ public class NewDialog extends JFrame {
         this.initCacheParam();
         this.setSize(800, 460);
         this.setMinimumSize(new Dimension(700, 430));
-        // 获取屏幕尺寸
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        // 获取鼠标当前位置（通常与IDE窗口位置一致）
+        PointerInfo pointerInfo = MouseInfo.getPointerInfo();
+        Point mousePoint = pointerInfo.getLocation();
 
-        // 计算窗口位置
-        int x = (screenSize.width - this.getWidth()) / 2;
-        int y = (screenSize.height - this.getHeight()) / 2;
+        // 获取所有显示器设备
+        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        GraphicsDevice[] screens = ge.getScreenDevices();
 
-        // 设置窗口位置
-        this.setLocation(x, y);
+        // 查找包含鼠标位置的显示器
+        GraphicsDevice targetScreen = null;
+        for (GraphicsDevice screen : screens) {
+            Rectangle screenBounds = screen.getDefaultConfiguration().getBounds();
+            if (screenBounds.contains(mousePoint)) {
+                targetScreen = screen;
+                break;
+            }
+        }
+
+        if (targetScreen != null) {
+            // 在目标显示器居中
+            Rectangle bounds = targetScreen.getDefaultConfiguration().getBounds();
+            int x = bounds.x + (bounds.width - this.getWidth()) / 2;
+            int y = bounds.y + (bounds.height - this.getHeight()) / 2;
+            this.setLocation(x, y);
+        } else {
+            // 回退到默认显示器逻辑
+            Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+            int x = (screenSize.width - this.getWidth()) / 2;
+            int y = (screenSize.height - this.getHeight()) / 2;
+            this.setLocation(x, y);
+        }
         this.setVisible(true);
 
         xmlText.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_XML);

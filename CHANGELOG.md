@@ -2,6 +2,10 @@
 
 # All-Format Changelog
 
+## [0.0.3]
+### Fixed
+- 多显示屏优化
+
 ## [0.0.2]
 ### Added
 - 优化格式化主题
