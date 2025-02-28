@@ -37,7 +37,7 @@ dependencies {
     implementation(group= "org.jsoup", name= "jsoup", version= "1.18.3")
     implementation(group= "cn.hutool", name= "hutool-http", version= "5.8.36")
     implementation(group= "cn.hutool", name= "hutool-json", version= "5.8.35")
-    implementation(group= "cn.hutool", name= "hutool-crypto", version= "5.8.35")
+    implementation(group= "cn.hutool", name= "hutool-crypto", version= "5.8.36")
     testImplementation(libs.junit)
 
     // IntelliJ Platform Gradle Plugin Dependencies Extension - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-dependencies-extension.html
